@@ -1,7 +1,7 @@
 # Dependencies
 import csv
 
-# Files to Load / Output (Remember to change these)
+# Files to Load / Output
 file_to_load = "election_data.csv"
 file_to_output = "election_analysis.txt"
 
@@ -33,7 +33,6 @@ with open(file_to_load) as election_data:
         candidate_name = row["Candidate"]
 
         # If the candidate does not match any existing candidate...
-        # (In a way, our loop is "discovering" candidates as it goes)
         if candidate_name not in candidate_options:
 
             # Add it to the list of candidates in the running
@@ -48,7 +47,7 @@ with open(file_to_load) as election_data:
 # Print the results and export the data to our text file
 with open(file_to_output, "w") as txt_file:
 
-  # Print the final vote count (to terminal)
+  # Print the final vote count
   election_results = (
     f"\nElection Results\n"
     f"--------------------\n"
@@ -71,14 +70,14 @@ with open(file_to_output, "w") as txt_file:
            winning_count = votes
            winning_candidate = candidate
         
-      # Print each candidate's voter count and percentage (to terminal)
+      # Print each candidate's voter count and percentage 
       voter_output = f"{candidate}: {vote_percentage:.3f}% ({votes})\n"
       print(voter_output, end="")
 
       # Save each candidate's voter count and percentage to text file
       txt_file.write(voter_output)
   
-  # Print the winning candidate (to terminal)
+  # Print the winning candidate
   winning_candidate_summary = (
     f"------------------------\n"
     f"Winner: {winning_candidate}\n"
