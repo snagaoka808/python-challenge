@@ -1,5 +1,5 @@
 
-Financial Analysis
+Budget Analysis
 ----------------------------
 Total Months: 86
 Total Revenue: $38382578
