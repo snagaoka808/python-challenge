@@ -5,7 +5,7 @@ import os
 # Dependencies
 import csv
 
-# Files to Load and Output (Remember to change these)
+# Load and Output
 file_to_load = "budget_data.csv"
 file_to_output = "budget_analysis.txt"
 
@@ -47,7 +47,7 @@ with open(file_to_load) as revenue_data:
 # Calculate the Average Revenue Change
 revenue_avg = sum(revenue_change_list) / len(revenue_change_list)
 
-# Generate Output Summary
+# Output Summary
 output = (
     f"\nBudget Analysis\n"
     f"----------------------------\n"
@@ -57,10 +57,10 @@ output = (
     f"Greatest Increase in Revenue: {greatest_increase[0]} (${greatest_increase[1]})\n"
     f"Greatest Decrease in Revenue: {greatest_decrease[0]} (${greatest_decrease[1]})\n")
 
-# Print the output (to terminal)
+# Print the output
 print(output)
 
-# Explore the results to text file
+# results to text file
 with open(file_to_output,"w") as txt_file:
   txt_file.write(output)
 
