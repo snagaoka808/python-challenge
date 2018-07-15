@@ -49,7 +49,7 @@ revenue_avg = sum(revenue_change_list) / len(revenue_change_list)
 
 # Generate Output Summary
 output = (
-    f"\nFinancial Analysis\n"
+    f"\nBudget Analysis\n"
     f"----------------------------\n"
     f"Total Months: {total_months}\n"
     f"Total Revenue: ${total_revenue}\n"
